@@ -49,8 +49,6 @@ function blast:update()
  for spark in all(self.sparks) do 
   spark.x += spark.dx
   spark.y += spark.dy
-  log(spark.x .. ' ' .. spark.y)
  end
- log('END')
 end
 

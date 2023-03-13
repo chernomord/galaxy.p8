@@ -10,7 +10,8 @@ end
 
 function player:draw()
  local frame, pos = flr(t()/2*30), self.pos
- spr(self.spr_id, pos.x, pos.y, 1, 1, self.direction.x < 0)
+ local reflect = self.spr_id == 4 and self.direction.x < 0
+ spr(self.spr_id, pos.x, pos.y, 1, 1, reflect)
  spr(19 + frame % 2, pos.x, pos.y + 8)
 end
 
